@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud Abid - Full Stack Developer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23000'/><text x='50' y='65' font-family='Arial, sans-serif' font-size='60' font-weight='bold' text-anchor='middle' fill='%232563eb'>M</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="logo">Mahmoud Abid</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="header-controls">
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-avatar">
+                    <img src="assets/avatar/mahmoud-abid.png" alt="Mahmoud Abid" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user\' style=\'font-size: 4rem; color: white;\'></i>';">
+                </div>
+                <h1 id="heroTitle">Mahmoud Abid</h1>
+                <p class="subtitle">Full Stack Software Engineer & AI Integration Specialist</p>
+                <p class="description">Passionate about building intelligent, scalable applications that solve real-world problems and transform ideas into reality</p>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">Flutter</span>
+                    <span class="tech-badge">Angular</span>
+                    <span class="tech-badge">.NET Core</span>
+                    <span class="tech-badge">Spring Boot</span>
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">AI/ML</span>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-code"></i> View Projects
+                    </a>
+                    <a href="files/Mahmoud Abid English Resume.pdf" download class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-content fade-in">
+                <div class="about-image-wrapper">
+                    <div class="about-image">
+                        <img src="assets/avatar/presentation-section.png" alt="Mahmoud Abid Presentation" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user-tie\' style=\'font-size: 6rem; color: white;\'></i>';">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Passionate Software Engineer</h3>
+                    <p>I'm Mahmoud Abid, a dedicated Full Stack Software Engineer with expertise in modern frameworks and AI integration. What drives me is the constant pursuit of upgrading my skills and mastering new coding concepts and architectures.</p>
+                    
+                    <p>I specialize in building cross-platform applications and integrating AI capabilities to create innovative solutions. My technical foundation includes clean architecture principles, design patterns (Singleton, CQRS, MVC, MVVM), and a passion for writing maintainable, scalable code.</p>
+
+                    <p>I thrive on transforming complex requirements into elegant, user-friendly applications that make a real difference in people's lifes.</p>
+
+                    <div class="about-actions">
+                        <a href="files/Mahmoud Abid English Resume.pdf" download class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                        <a href="files/Mahmoud__Abid_CoverLetter.pdf" download class="btn btn-primary">
+                            <i class="fas fa-file-alt"></i> Cover Letter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Technical Expertise</h2>
+            <div class="skills-grid fade-in">
+                <div class="skill-category">
+                    <h3><i class="fas fa-mobile-alt"></i> Frontend Development</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">Jetpack Compose</span>
+                        <span class="skill-tag">SwiftUI</span>
+                        <span class="skill-tag">HTML5/CSS3</span>
+                        <span class="skill-tag">TypeScript</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend Development</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">.NET Core</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">NestJS</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> AI & Machine Learning</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Google Gemini</span>
+                        <span class="skill-tag">Stable Diffusion</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Custom AI Agents</span>
+                        <span class="skill-tag">ML Integration</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-building"></i> Architecture & Design</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Clean Architecture</span>
+                        <span class="skill-tag">CQRS</span>
+                        <span class="skill-tag">MVC/MVVM</span>
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">Design Patterns</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-shield-alt"></i> Security & Auth</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">SSO</span>
+                        <span class="skill-tag">MFA</span>
+                        <span class="skill-tag">JWT</span>
+                        <span class="skill-tag">RSA</span>
+                        <span class="skill-tag">OAuth</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> DevOps & Tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">IoT</span>
+                        <span class="skill-tag">Blockchain</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Featured Projects</h2>
+            <div class="projects-grid fade-in">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Recetta - AI-Powered Cooking Assistant</h3>
+                        <p class="project-description">
+                            Revolutionary cross-platform mobile app that transforms cooking with AI-driven recipe generation. Users can add ingredients to their inventory and let AI generate step-by-step recipes tailored to what's on hand, powered by Gemini and Stable Diffusion.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Jetpack Compose</span>
+                            <span class="tech-tag">SwiftUI</span>
+                            <span class="tech-tag">NestJS</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Gemini AI</span>
+                            <span class="tech-tag">Stable Diffusion</span>
+                        </div>
+                        <div class="project-links">
+                            <button onclick="openProjectGallery('recetta')" class="project-link link-primary">View Screenshots</button>
+                            <a href="https://github.com/AbidMahmoudUp/RecettaAndroid" class="project-link link-secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Smart Farming Management Platform</h3>
+                        <p class="project-description">
+                            Comprehensive IoT-enabled agricultural solution empowering farmers with intelligent land management, AI-driven insights, plant disease detection, blockchain rental system, and multilingual AI agricultural expert support.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Cross-platform</span>
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">NestJS</span>
+                            <span class="tech-tag">Microservices</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Python AI</span>
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">Blockchain</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Power BI</span>
+                        </div>
+                        <div class="project-links">
+                            <button onclick="openProjectGallery('farming')" class="project-link link-primary">View Screenshots</button>
+                            <a href="https://github.com/AbidMahmoudUp/DreamCraftPim" class="project-link link-secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Professional Experience</h2>
+            <div class="experience-timeline fade-in">
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <div class="experience-company">Finlogik</div>
+                        <div class="experience-role">AI Code Review System Developer - Internship</div>
+                        <p class="experience-description">
+                            Developed an intelligent code review system that revolutionizes development workflows with automated Git repository monitoring, real-time code quality evaluation, and automated company coding standards enforcement.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <div class="experience-company">ITpidia</div>
+                        <div class="experience-role">Authentication System Architect - Internship</div>
+                        <p class="experience-description">
+                            Engineered a robust, enterprise-grade authentication system using Clean Architecture, CQRS & Mediator patterns, implementing SSO, MFA, JWT, and RSA encryption for high-volume enterprise environments.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <div class="experience-company">ESPRIT</div>
+                        <div class="experience-role">Software Engineering Student</div>
+                        <p class="experience-description">
+                            Currently pursuing Software Engineering at ESPRIT (Ecole Supérieure Privée d'Ingénierie et de Technologies), focusing on advanced programming concepts, AI integration, and modern software architecture patterns.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Let's Connect</h2>
+            <div class="contact-content fade-in">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">Ready to discuss your next project or collaboration opportunity?</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>mahmoudabidup@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+216 26 371 661</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Tunisia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/AbidMahmoudUp" class="social-link" title="GitHub" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mahmoud-abid" class="social-link" title="LinkedIn" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/abidmahmoud_" class="social-link" title="Instagram" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:mahmoud.abid@example.com" class="social-link" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mahmoud Abid. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+                "Passionate about transforming ideas into intelligent, scalable solutions that drive real-world impact"
+            </p>
+        </div>
+    </footer>
+
+    <!-- Project Gallery Modal -->
+    <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-overlay" onclick="closeProjectGallery()"></div>
+        <div class="gallery-container">
+            <div class="gallery-header">
+                <h3 id="galleryTitle">Project Screenshots</h3>
+                <button class="gallery-close" onclick="closeProjectGallery()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="gallery-content">
+                <div class="gallery-main">
+                    <div class="main-image-container">
+                        <img id="mainImage" src="" alt="Screenshot">
+                        <button class="gallery-nav prev" onclick="changeImage(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-nav next" onclick="changeImage(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-thumbnails">
+                    <div class="thumbnail-container" id="thumbnailContainer">
+                        <!-- Thumbnails will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
